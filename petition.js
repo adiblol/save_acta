@@ -35,9 +35,11 @@ $(function() {
 						pos = 0;
 					$('#slide').css('background-position', '0 -' + pos * 371 + 'px');
 					$('#slide').animate({'opacity': 1}, 'fast');
+					wait();
 				});
 			}, time[pos] * 1000);
 		}
+		wait();
 	};
 	slide.src = $('#slide').css('background-image').slice(5, -2);
 });
