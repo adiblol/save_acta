@@ -23,18 +23,21 @@ $(function() {
 	});
 	
 	var pos = 0;
+	var time = [6, 8, 6, 6, 5, 6, 6, 9];
 	
 	var slide = new Image();
 	slide.onload = function() {
-		window.setInterval(function() {
-			$('#slide').animate({'opacity': 0.1}, 'fast', function() {
-				pos++;
-				if(pos == 8)
-					pos = 0;
-				$('#slide').css('background-position', '0 -' + pos * 371 + 'px');
-				$('#slide').animate({'opacity': 1}, 'fast');
-			});
-		}, 7000);
+		function wait() {
+			window.setTimeout(function() {
+				$('#slide').animate({'opacity': 0.1}, 'fast', function() {
+					pos++;
+					if(pos == 8)
+						pos = 0;
+					$('#slide').css('background-position', '0 -' + pos * 371 + 'px');
+					$('#slide').animate({'opacity': 1}, 'fast');
+				});
+			}, time[pos] * 1000);
+		}
 	};
 	slide.src = $('#slide').css('background-image').slice(5, -2);
 });
