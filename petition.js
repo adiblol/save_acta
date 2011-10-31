@@ -23,7 +23,7 @@ $(function() {
 	});
 	
 	var pos = 0;
-	var time = [6, 8, 6, 6, 5, 6, 6, 9];
+	var time = [6, 8, 6, 6, 5, 6, 6, 12];
 	
 	var slide = new Image();
 	slide.onload = function() {
