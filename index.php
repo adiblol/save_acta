@@ -11,7 +11,7 @@
 		<title><?php echo $titleTr; ?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="keywords" content="acta,save acta,telecomix,petition,freedom">
-		<meta name="description" content="This petition is to urge lawmakers to support the ACTA. Our country needs ACTA to protect us from the evils of freedom.">
+		<meta name="description" content="This petition is to urge lawmakers to support ACTA. The European Union needs ACTA to protect us from the evils of freedom.">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 		<script src="jquery.js"></script>
