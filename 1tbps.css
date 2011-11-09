@@ -1,0 +1,50 @@
+/* De-clouded by 1Tbps.org. Because centralized services suck. */
+
+
+@font-face {
+	font-family: 'Lobster';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Lobster'), url('lobster.woff') format('woff');
+}
+
+
+#hosted {
+	position: absolute;
+	left:0; bottom:0;
+	padding: 2px;
+	border-radius: 0 10px 0 0;
+	font-size: 8pt;
+	line-height: 9pt;
+	opacity: 0.7;
+	max-width: 50%;
+	-moz-transition-property: opacity, background-color, bottom;
+	-moz-transition-duration: 0.6s;
+}
+#hosted a {
+	color: inherit;
+	-moz-transition-property: color;
+	-moz-transition-duration: inherit;
+}
+#hosted .details {
+	display: block;
+	-moz-transition-property: height;
+	-moz-transition-duration: inherit;
+	height: 0pt;
+	overflow: hidden;
+}
+#hosted p {
+	margin: 3pt;
+	padding: 0;
+}
+#hosted:hover {
+	background-color: rgba(200,200,200, 0.9);
+	opacity: 1.0;
+	bottom: 0pt;
+}
+#hosted:hover a {
+	color: #0645AD;
+}
+#hosted:hover .details {
+	height: 20pt;
+}

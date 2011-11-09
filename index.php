@@ -1,4 +1,6 @@
 <?php
+	if (!file_exists("count.csv")) file_put_contents("count.csv", "0");
+	if (!file_exists("signatures.csv")) file_put_contents("signatures,csv", "");
 	if((substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) == 'fr' || $_SERVER['QUERY_STRING'] == 'fr') && $_SERVER['QUERY_STRING'] != 'en') {
 		require("fr.php");
 	} else {
@@ -9,11 +11,13 @@
 <html>
 	<head>
 		<title><?php echo $titleTr; ?></title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="keywords" content="acta,save acta,telecomix,petition,freedom">
-		<meta name="description" content="This petition is to urge lawmakers to support ACTA. The European Union needs ACTA to protect us from the evils of freedom.">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="keywords" content="acta,save acta,telecomix,petition,freedom" />
+		<meta name="description" content="This petition is to urge lawmakers to support ACTA. The European Union needs ACTA to protect us from the evils of freedom." />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="1tbps.css" />
+		<link rel="icon" type="image/png" href="icon.png" />
+		<!--<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">--> <!-- Clouds suck, don't they? 1Tbps.org -->
 		<script src="jquery.js"></script>
 		<script src="petition.js"></script>
 	</head>
@@ -29,9 +33,9 @@
 			
 			<?php echo $textTr; ?>
 			
-			<div id="video">
+			<!--<div id="video">
 				<iframe width="500" height="281" src="http://www.youtube.com/embed/DX1iplQQJTo?rel=0" frameborder="0" allowfullscreen></iframe>
-			</div>
+			</div>--> <!-- Fla$h is evil. 1Tbps.org -->
 			
 			<h2><?php
 				$count = fopen('count.csv', 'r');
@@ -66,6 +70,7 @@
 		<footer>
 			<?php echo $footerTr ?>
 			<a href="http://telecomix.org/" title="This is TELECOMIX."><div id="logo"></div></a>
+			<div id="hosted"><p>Proudly hosted by <a href="http://www.1tbps.org/" title="1Tbps.org">1Tbps Project</a>. Mirrored from <a href="http://saveacta.com/" title="ACTA petition">Save ACTA!</a></p><p class="details">(git: <a href="https://gitorious.org/saveacta/saveacta-www">orig.</a>, <a href="https://github.com/adiblol/save_acta">this ver.</a>) This mirror hasn't been authorized by original petition authors and is not a verbatim copy of saveacta.com. See page source for details.</p></div>
 		</footer>
 	</body>
 </html>
